@@ -1,47 +1,42 @@
-import os
-import sys
 
+
+'''First attempt: clean.
+we sort by descending, so there is a probability that it can be faster as we seek the higher to spend
+'''
 
 def getMoneySpent(keyboards, drives, b):
   keyboards.sort(reverse = True)
   drives.sort(reverse = True)
-  if keyboards[-1] + drives[-1] > b:
-    return -1
-  k = amount = 0
+  amount = -1
   for drive in drives:
-    while k < len(keyboards) and drive + keyboards[k] > b:
-      k += 1
-    if k == len(keyboards):
-      k = 0
-      continue
-    cost = drive + keyboards[k]
-    if cost == b:
-      return b
-    if cost > amount:
-      amount = cost
-    k = 0
+    for keyboard in keyboards:
+      cost = drive + keyboard
+      if cost == b:
+        return b
+      elif cost < b:
+        amount = cost if cost > amount else amount
+        break
   return amount
 
-if __name__ == '__main__':
-    
 
-    bnm = input().split()
+'''Second attempt: faster in some condition
+The same as above, but in case there is no enough money,
+no need to go through all the loop, and exit immediateley 
+'''
 
-    b = int(bnm[0])
-
-    n = int(bnm[1])
-
-    m = int(bnm[2])
-
-    keyboards = list(map(int, input().rstrip().split()))
-
-    drives = list(map(int, input().rstrip().split()))
-
-    #
-    # The maximum amount of money she can spend on a keyboard and USB drive, or -1 if she can't purchase both items
-    #
-
-    moneySpent = getMoneySpent(keyboards, drives, b)
-
-    print(str(moneySpent))
+def getMoneySpent2(keyboards, drives, b):
+  keyboards.sort(reverse = True)
+  drives.sort(reverse = True)
+  if keyboards[-1] + drives[-1] > b:
+    return -1
+  amount = 0
+  for drive in drives:
+    for keyboard in keyboards:
+      cost = drive + keyboard
+      if cost == b:
+        return b
+      elif cost < b:
+        amount = cost if cost > amount else amount
+        break
+  return amount
 
