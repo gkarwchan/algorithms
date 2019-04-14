@@ -1,13 +1,13 @@
 '''
 Pythonic way: one line
-But it is slow: O(n^2)
+But it is the slowest: O(n^2)
 '''
 def getMoneySpent(keyboards, drives, b):
   return max([k + d for k in keyboards for d in drives if b >= k + d], default = -1)
 
 
 '''
-Faster: O(n)
+Faster: O(n + m)
 we sort by descending, so there is a probability that it can be faster as we seek the higher to spend
 '''
 
@@ -26,7 +26,9 @@ def getMoneySpent2(keyboards, drives, b):
   return amount
 
 
-'''Second attempt: faster in some condition
+'''
+Second attempt: faster in some condition
+O(n + m) modified
 The same as above, but in case there is no enough money,
 no need to go through all the loop, and exit immediateley 
 '''
