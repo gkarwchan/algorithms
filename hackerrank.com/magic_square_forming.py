@@ -9,11 +9,6 @@ def formingMagicSquare(s):
     [6, 7, 2, 1, 5, 9, 8, 3, 4],
     [2, 7, 6, 9, 5, 1, 4, 3, 8]
   ]
-  current = []
-  for i in s:
-    current += i
-  min = 1000
-  for square in possibleSquares:
-    cost = sum(map(lambda a, b: abs(a - b), square, current))
-    min = cost if cost < min else min
-  return min
+  current = [item for sublist in s for item in sublist]
+  costs = [sum(map(lambda a, b: abs(a - b), square, current)) for square in possibleSquares]
+  return min(costs)
