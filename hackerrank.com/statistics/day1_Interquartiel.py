@@ -1,5 +1,5 @@
-def createDuplicate(values, frequencies):
-  
+def createDuplicate(data, freq):
+  return [y for x in zip(data, freq) for y in [x[0]] * x[1]]
 
 def median(arr):
   count = len(arr)
@@ -10,14 +10,15 @@ def median(arr):
 
 if __name__ == '__main__':
     count = int(input().rstrip())
-    numbers = sorted(list(map(int, input().rstrip().split())))
+    data = list(map(int, input().rstrip().split()))
+    freq = list(map(int, input().strip().split()))
+    numbers = sorted(createDuplicate(data, freq))
+    count = len(numbers)
     if count % 2 == 0:
       lower = numbers[:(count // 2)]
       upper = numbers[count // 2:]
     else:
       lower = numbers[: count // 2]
       upper = numbers[count // 2 + 1:]
-    print (int(median(lower)))
-    print (int(median(numbers)))
-    print (int(median(upper)))
 
+    print('{:.1f}'.format(median(upper) - median(lower)))
