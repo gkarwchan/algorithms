@@ -1,3 +1,7 @@
+'''
+Median, Mean and Mode
+'''
+
 if __name__ == '__main__':
   count = int(input().rstrip())
   numbers = sorted(list(map(int, input().rstrip().split())))

@@ -1,3 +1,7 @@
+'''
+weighted mean
+'''
+
 if __name__ == '__main__':
   count = int(input().rstrip())
   numbers = list(map(int, input().rstrip().split()))
