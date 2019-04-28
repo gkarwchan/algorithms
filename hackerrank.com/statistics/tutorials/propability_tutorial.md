@@ -146,5 +146,20 @@ We want to calculate ρ(R | M)
 
 ρ(R | M) = (9/10 * 1/73) / ((9/10 * 1/73) + (1/10 * 72/73) = (9/730) / (9/730 + 72/730) = 9 / 81 = 1 / 9
 ```
+# Permutation
 
+Permutation is the number of scenarios or possibilities for different input.
+
+example:
+
+> How many ways you can seat 5 people in 5 chairs?  
+> the answer is : 5 * 4 * 3 * 2 * 1  
+> How many ways you can seat 5 people in 3 chairs:
+> the answer is: 5 * 4 * 3
+
+### Permutation formula:
+```
+permutation(n,r) = n! / (n-r)!
+ρ(n, r) = nρr = n! / (n -r)!
+```
 
