@@ -10,26 +10,47 @@
 A compound event is a combination of 2 or more simple events.  
 
 * **A∪B** : denotes the occurrence of either A or B.  
-* **A∪B** : denotes the occurrence of A and B together.  
+* **A∩B** : denotes the occurrence of A and B together.  
 
 ## Mutually exclusive
 
-A and B are mutually exclusive if they have no events in common.  
+A and B are mutually exclusive (or disjoint) if they have no events in common.  
 ```
 A∩B = 0
 ```
+example:
+the probability of getting 2 And 6 when we role a dice is impossible.
+```
+ρ(2 ∩ 6) = 0
+```
 
-the propability of any of 2 events occurring is the union of events `(∪)`
-if they are mutually exclusive then 
+the probability of the union of disjoint events is the sum of the events' individual probabilities.
+
+```
+ρ(A∪B) = ρ(A) + ρ(B)
+```
+the probability of the occurrence of any of 2 disjoint events is the sum of the probability of those individual events:
+```
+ρ(A or B) = ρ(A) + ρ(B)
+```
+
+## Collectively exhaustive
+Two events are collectively exhaustive if their union covers all events in the sample space.
 
 ```javascript 
 ρ(A) + ρ(B) = 1
-A + B = S   // (sample space)
+A ∪ B = S   // (sample space)
 ```
+example probability when we role a dice to get 2 or 6:
+```
+ρ(2 or 6) = ρ(2) + ρ(6)
+ρ(2 ∪ 6) = 1/6 + 1/6 = 1/3
+```
+
 
 # Conditional Probability
 
-Conditional probability is the probability of an event occuring, assuming that one or more other events have already occured.  
+Conditional probability is the probability of an event occurring, assuming that one or more other events have already occurred.  
 There are two different scenarios:  
 
 1. the events are dependent.
@@ -38,7 +59,7 @@ There are two different scenarios:
 A and B are considered to be independent if A has no effect on the probability of event B.  
 
 #### Symbol denotes
-We express that as `ρ(B | A)`, as the probability of event B, assuming the A already occured.
+We express that as `ρ(B | A)`, as the probability of event B, assuming the A already occurred.
 
 ### The events are independent
 ```
@@ -46,11 +67,18 @@ We express that as `ρ(B | A)`, as the probability of event B, assuming the A al
 ```
 
 ### The events are dependents
-If Event A and B are not independent, then we must consider the probability of that both events occur, we call that the **Intersection** of events:  
+The probability of both events is the product of the probabilities for each event.  
+We can express that as: `ρ(A and B)` or `ρ(A ∩ B)`
+
+```javascript 
+ρ(A ∩ B) = ρ(A) * ρ(B)
+```
+
+If Event A and B are not independent, then we must consider the probability of that both events occur, we call that the **intersection** of events:  
 ```
 ρ(A∩B) = ρ(B | A) * ρ(A).
 ```
-We can use the above definition to find the conditional probability by dividing the probability of the intersection of the two by the probability of the event that is assumed to have already occured:
+We can use the above definition to find the conditional probability by dividing the probability of the intersection of the two by the probability of the event that is assumed to have already occurred:
 ```
 ρ(B|A) = ρ(A∩B) / ρ(A)
 ```
