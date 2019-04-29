@@ -158,8 +158,26 @@ example:
 > the answer is: 5 * 4 * 3
 
 ### Permutation formula:
-```
+```python
 permutation(n,r) = n! / (n-r)!
-ρ(n, r) = nρr = n! / (n -r)!
+ρ(n, r) = nρr = n! / (n -r)! # if order is important
+
+ρ(n, r) = nρr = n! / (n -r)! / r! # if order is important
 ```
 
+#### example 1:  
+To put 6 people in 3 chairs.
+```python
+ρ(6, 3) = 6! / 3! = 120 # if order is important
+ρ(6, 3) = 6! / 3! / 3! = 20 # if order is important
+```
+
+#### example 2:
+4 poeple shaking hands. How many possibilities.  
+It is about 4 people in group of 2.  
+
+```
+ρ(4, 2) = 4! / 2! / 2! = 6
+```
+
+#### 
