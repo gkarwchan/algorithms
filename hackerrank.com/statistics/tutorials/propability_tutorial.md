@@ -180,4 +180,30 @@ It is about 4 people in group of 2.
 ρ(4, 2) = 4! / 2! / 2! = 6
 ```
 
-#### 
+# Permutations, counting and combinations
+
+#### example 1:
+Find the possibility of flipping exactly 2 heads out of 3 flipps.  
+
+Total number = 2**3 = 8
+Number of exactly 2 heads = 3 = (2 + 1) = ~∑ⁿ⁻¹ n
+Propability = 3/8
+
+#### example 3:
+Club of 9 peopel want to choose a board of three officers: President, Vice President, and Secretary.  
+
+Total number of possibilities = 9! / (9-3)! = 504
+
+#### example 4:
+Card deck of 36 unique cards (from 1-9). What is the probability of getting 4 Aces.
+
+ρ(all 4 aces in 9 cards) = # of uniques ways that can happend / total # of hands
+
+ρ(total arrangement of 9 cards) = 36! / ((36-9)! * 9!)
+
+ρ(# of ways to get 4 aces) = 4 aces and ρ(5 other cards) = (36 - 4)! / ((36 - 9)! * 5!)
+
+ρ(4 aces) = ((36 - 4)! / ((36 - 9)! * 5!)) / (36! / ((36-9)! * 9!))
+ρ(4 aces) = ((36 - 4)! / ((36 - 9)! * 5!)) * ((36-9)! * 9!) / 36!) = 2 / 935
+
+
