@@ -1,5 +1,15 @@
-
+'''
+short sexy approach
+'''
 def cutTheSticks(sticks):
+    count = [sticks.count(k) for k in sorted(set(sticks))]
+    return [sum(count[i:]) for i in range(len(count))]
+
+'''
+traditional expressive approach
+'''
+
+def cutTheSticks1(sticks):
     uniques = sorted(set(sticks))
     total = len(sticks)
     result = []
@@ -8,6 +18,7 @@ def cutTheSticks(sticks):
         result.append(total)
         total -= lengths[j]
     return result    
+
 
 
 if __name__ == '__main__':
