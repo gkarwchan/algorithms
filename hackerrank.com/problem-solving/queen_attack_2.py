@@ -1,3 +1,8 @@
+'''
+first approach
+fast O(k)
+'''
+
 def queensAttack(n, k, r_q, c_q, obs):
     stp_r = n - c_q
     stp_l = c_q - 1
@@ -32,7 +37,27 @@ def queensAttack(n, k, r_q, c_q, obs):
     return stp_r + stp_l + stp_u + stp_d + stp_ld + stp_lu + stp_rd + stp_ru
 
 
-    
+'''
+second approach
+slow but less code
+O(n^2) 
+'''
+def queensAttack1(n, k, r_q, c_q, obs):
+    ans = 0
+    for dx in range(-1, 2, 1):
+        for dy in range (-1, 2, 1):
+            if dx == 0 and dy == 0:
+                continue
+            x = r_q + dx
+            y = c_q + dy
+            while x <= n and x > 0 and y <= n and y > 0:
+                if (x, y) in obs:
+                    break
+                ans += 1
+                x += dx
+                y += dy
+    return ans
+
     
 
 if __name__ == '__main__':
