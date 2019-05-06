@@ -1,3 +1,6 @@
+# web location
+# https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem
+
 def climbingLeaderboard(scores, alice):
     ranks = sorted(list(set(scores)), reverse=True)
     aliceRanks = []
