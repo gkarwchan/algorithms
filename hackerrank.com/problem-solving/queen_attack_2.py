@@ -1,3 +1,6 @@
+# web location
+# https://www.hackerrank.com/challenges/queens-attack-2/problem
+
 '''
 first approach
 fast O(k)

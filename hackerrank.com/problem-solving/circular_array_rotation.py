@@ -1,3 +1,7 @@
+# web location
+# https://www.hackerrank.com/challenges/circular-array-rotation/problem
+
+
 def circularArrayRotation(a, k, queries):
     return [a[(val - k) % len(a)] for val in queries]
 

@@ -1,3 +1,6 @@
+# Web location
+# https://www.hackerrank.com/challenges/bon-appetit/problem
+
 def bonAppetit(bill, k, b):
   bill.pop(k)
   owning = b - (sum(bill) / 2)
