@@ -1,3 +1,6 @@
+# Web location
+# https://www.hackerrank.com/challenges/cut-the-sticks/problem
+
 '''
 short sexy approach
 '''

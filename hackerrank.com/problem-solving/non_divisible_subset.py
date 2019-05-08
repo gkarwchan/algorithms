@@ -1,3 +1,6 @@
+# Web location
+# https://www.hackerrank.com/challenges/non-divisible-subset/problem
+
 from math import ceil
 
 if __name__ == '__main__':
