@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/alphabet-rangoli/problem
+
 '''
 without importing ascii
 '''

@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/find-a-string/problem
+
 '''
 First attempt. Clear
 As not everything should be one linear, this is a clear solution

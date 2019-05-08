@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/merge-the-tools/problem
+
 '''
 first simple attempt
 '''

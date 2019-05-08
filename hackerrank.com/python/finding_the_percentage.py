@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/finding-the-percentage/problem
+
 if __name__ == '__main__':
   dictionary = {}
   for _ in range(int(input())):
