@@ -10,7 +10,7 @@ Examples of iterables:
 * Non-sequence types: (dict, file)
 * Any object that implements: `__iter__()` or `__getitem__()` method.
 
-When an iterable is passed to the built-in function `iter()`, it returns an iterator for the objct.
+When an iterable is passed to the built-in function `iter()`, it returns an iterator for the object.
 
 Python gives us the ability to iterate of iterables, using a type of object called `iterator`. According to the official documentation:
 
@@ -52,6 +52,10 @@ for person, age in zip(people, ages):
 ```
 
 #### Nested comprehension
+
+```
+[ expression-involving-loop-variables for outer-loop-variable in outer-sequence for inner-loop-variable in inner-sequence ] 
+```
 Requirements: Generate from 'ABCDE' all possible pairs:  
 [('A', 'A'), ('A', 'B'), ('A', 'C'), ... 
  ('B', 'B'), ...
