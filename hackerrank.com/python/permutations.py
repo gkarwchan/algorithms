@@ -4,8 +4,7 @@ from itertools import permutations
 
 if __name__ == '__main__':
       s, k = input().split()
-      k = int(k)
-      result = sorted(list(map(lambda x: ''.join(x), permutations(s, k))))
+      result = sorted(list(map(lambda x: ''.join(x), permutations(s, int(k)))))
       print ('\n'.join(result))
       
       
