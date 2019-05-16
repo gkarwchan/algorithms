@@ -15,9 +15,3 @@ object Solution {
     println(Math.abs(ax1 - ax2))
   }
 }
-
-//  Another way
-
-object Solution {
-  
-}
