@@ -1,3 +1,4 @@
+// https://www.hackerrank.com/challenges/diagonal-difference/problem
 
 function diagonalDifference(arr) {
   const ax1 = arr.reduce((acc, line, ind) => {
