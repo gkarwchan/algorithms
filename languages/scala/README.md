@@ -1,3 +1,33 @@
+# Syntax
+
+**`val`**: is a Constant.  
+**`var`**: is a variable.  
+```scala
+var greeting: String = null
+```
+
+# Types
+Scala has seven numeric types:  
+Numeric:  
+* Byte
+* Char
+* Short
+* Int
+* Long
+* Float
+* Double
+
+Boolean:
+* Boolean
+
+You can invoke methods on numbers:
+```scala
+1.toString() 
+1.to(10) // generate Range(1,2,3,4,5,6,7,8,9,10)
+```
+
+## Wrapper Objects
+Scala wraps 
 # Loop
 
 Traverse:
