@@ -1,3 +1,4 @@
+// https://www.hackerrank.com/challenges/grading/problem
 
 function gradingStudents(grades) {
     return grades.map(x => x < 38 ? x : (x % 5 > 2 ? x + 5 - x % 5 : x));
