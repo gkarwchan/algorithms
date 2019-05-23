@@ -116,3 +116,20 @@ val bSorted = b.sroted(_ < _)
 val a = Array(1, 7, 2, 9)
 scala.util.Sorting.quickSort(a)
 ```
+
+# Anonymous Objects (objects of the fly)
+
+in Scala, we do tuple:  
+
+
+```scala
+val rec = scores.tail.foldLeft((scores.head, 0, scores.head, 0)) {
+      (r, score) =>
+        if (score > r._1) (score, r._2 + 1, r._3, r._4)
+        else if (score < r._3) (r._1, r._2, score, r._4 + 1)
+        else r
+    }
+    Array(rec._2, rec._4)
+```
+
+from the [breaking-best-and-worst-records](../../hackernews.com/problem-solving/breaking-best-and-worst-records.scala)
