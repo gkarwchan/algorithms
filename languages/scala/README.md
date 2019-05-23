@@ -132,4 +132,4 @@ val rec = scores.tail.foldLeft((scores.head, 0, scores.head, 0)) {
     Array(rec._2, rec._4)
 ```
 
-from the [breaking-best-and-worst-records](../../hackernews.com/problem-solving/breaking-best-and-worst-records.scala)
+from the [breaking-best-and-worst-records](../../hackerrank.com/problem-solving/breaking-best-and-worst-records.scala)
