@@ -105,3 +105,10 @@ output = [24, 24, 24, 24, 35, 35, 35, 66, 66, 34, 63, 63, 63, 63, 63]
 ```python
 [y for x in zip(data, freq) for y in [x[0]] * x[1]]
 ```
+
+## reduce
+
+```python
+from functools import reduce
+
+reduce(lambda: x, y: x+y, ar)

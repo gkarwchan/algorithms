@@ -19,3 +19,9 @@ if __name__ == '__main__':
   print(gcdCalc(24, 36))
   
 ```
+
+Or using GCD:
+
+```matlab
+gcd(x, y) = (x * y) // lcm (x, y)
+```
