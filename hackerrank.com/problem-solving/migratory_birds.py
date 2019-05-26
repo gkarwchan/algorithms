@@ -1,4 +1,4 @@
-#!/bin/python3
+# https://www.hackerrank.com/challenges/migratory-birds/problem
 
 def migratoryBirds(arr):
     count = {i: 0 for i in set(arr)}
