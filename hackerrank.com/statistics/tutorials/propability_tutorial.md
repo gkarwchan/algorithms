@@ -207,3 +207,6 @@ Card deck of 36 unique cards (from 1-9). What is the probability of getting 4 Ac
 ρ(4 aces) = ((36 - 4)! / ((36 - 9)! * 5!)) * ((36-9)! * 9!) / 36!) = 2 / 935
 
 
+# Formulas
+
+∑ⁿ⁻¹ k = (n * (n - 1)) / 2
