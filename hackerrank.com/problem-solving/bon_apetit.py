@@ -1,4 +1,4 @@
-# Web location
+
 # https://www.hackerrank.com/challenges/bon-appetit/problem
 
 def bonAppetit(bill, k, b):
