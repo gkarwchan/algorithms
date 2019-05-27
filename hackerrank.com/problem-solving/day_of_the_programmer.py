@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/day-of-the-programmer/problem
+
 # First try: clear
 '''
 this is a clear algorithm, that is easy to understand and follow
@@ -18,7 +20,7 @@ def dayOfProgrammer(year):
 
 # Second try: condensed
 '''
-this is less clear than the one above, but more dendensed
+this is less clear than the one above, but more condensed
 '''
 
 def dayOfProgrammer2(year):
