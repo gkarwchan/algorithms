@@ -1,19 +1,28 @@
 'use strict';
+// https://www.hackerrank.com/challenges/sock-merchant/problem
 
-// Complete the sockMerchant function below.
 function sockMerchant(n, ar) {
-    if (ar.length > n) {
-        ar.splice(n)
-    }
-    const socksByColorsTotal = ar.reduce((socksByColors, sock) => {
-        if (isNaN(sock)) return socksByColors;
-        if (socksByColors[sock]) {
-            socksByColors[sock]++;
-        } else {
-            socksByColors[sock] = 1;
-        }
-        return socksByColors
-    }, {});
-    return Object.values(socksByColorsTotal).map(val => Math.floor(val / 2))
-        .reduce((sum, val) => sum += val, 0)
-}
+    const counts = ar.reduce((acc, i) => {
+      acc[i] = acc[i] ? ++acc[i] : 1
+      return acc
+    }, {})
+    return Object.values(counts).reduce((acc, i) => acc + Math.floor(i/2), 0)
+  }
+  
+  function main(inputData) {
+    const lines = inputData.split("\n")
+    const n = parseInt(lines[0])
+    const ar = lines[1].split(' ').map(x => parseInt(x))
+    console.log(sockMerchant(n, ar))
+  }
+  
+  process.stdin.resume();
+  process.stdin.setEncoding("ascii");
+  let _input = '';
+  process.stdin.on("data", input => {
+    _input += input;
+  });
+  
+  process.stdin.on("end", () => {
+   main(_input);
+  });
