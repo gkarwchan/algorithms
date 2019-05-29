@@ -8,7 +8,6 @@ function main(inputData) {
   const lines = inputData.split("\n")
   const n = parseInt(lines[0])
   const p = parseInt(lines[1])
-  // const ar = lines[1].split(' ').map(x => parseInt(x))
   console.log(drawingBook(n, p))
 }
 
