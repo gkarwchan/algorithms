@@ -1,3 +1,4 @@
+# https://www.hackerrank.com/challenges/electronics-shop/problem
 '''
 Pythonic way: one line
 But it is the slowest: O(n^2)
@@ -7,28 +8,8 @@ def getMoneySpent(keyboards, drives, b):
 
 
 '''
-Faster: O(n + m)
-we sort by descending, so there is a probability that it can be faster as we seek the higher to spend
-'''
-
-def getMoneySpent2(keyboards, drives, b):
-  keyboards.sort(reverse = True)
-  drives.sort(reverse = True)
-  amount = -1
-  for drive in drives:
-    for keyboard in keyboards:
-      cost = drive + keyboard
-      if cost == b:
-        return b
-      elif cost < b:
-        amount = cost if cost > amount else amount
-        break
-  return amount
-
-
-'''
 Second attempt: faster in some condition
-O(n + m) modified
+O(n * m) modified
 The same as above, but in case there is no enough money,
 no need to go through all the loop, and exit immediateley 
 '''
@@ -47,7 +28,7 @@ def getMoneySpent3(keyboards, drives, b):
       if cost == b:
         return b
       elif cost < b:
-        amount = cost if cost > amount else amount
+        amount = max(cost, amount)
         break
   return amount
 
