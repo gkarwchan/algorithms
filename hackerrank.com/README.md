@@ -1,6 +1,6 @@
 # Hacker Rank Web site
 
-[hacker Rank] (hackerrank.com) is a web site that provides code challenges.  
+[hacker Rank](https://hackerrank.com) is a web site that provides code challenges.  
 I am trying to solve these problems using three languages:  
 
 1. python
