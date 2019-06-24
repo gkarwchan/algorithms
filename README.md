@@ -5,7 +5,7 @@ This repo contains bunch of algorithms and code challenges from different websit
 
 ## Contents:
 
-1. [hackerRank.com](/hackerrank.com/README.md)
-2. [Code challenges from dailyCodingProblem.com](/dailyCodingProblem.com/README.md)
-3. [Math & Statistics problems](/math/README.md)
+1. [hackerRank.com](/hackerrank.com)
+2. [Code challenges from dailyCodingProblem.com](/dailyCodingProblem.com)
+3. [Math & Statistics problems](/math)
 4. Others...
