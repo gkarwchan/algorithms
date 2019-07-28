@@ -1,16 +1,15 @@
 # https://www.hackerrank.com/challenges/happy-ladybugs/problem
 
 def happyLadybugs(b):
-  blist = list(b)
-  count = { i:blist.count(i) for i in set(blist) }
+  count = { i:b.count(i) for i in set(b) }
   for k, v in count.items():
     if v == 1 and k != '_':
       return 'NO'
-  if '_' in blist:
+  if '_' in b:
     return 'YES'
   lastChar = None
   isSingle = False
-  for i in blist:
+  for i in b:
     if i != lastChar:
       if isSingle:
         return 'NO'
