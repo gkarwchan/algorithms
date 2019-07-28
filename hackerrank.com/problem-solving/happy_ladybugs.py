@@ -17,7 +17,7 @@ def happyLadybugs(b):
       lastChar = i
     else:
       isSingle = False
-  return 'YES'
+  return 'NO' if isSingle else 'YES'
 
 
 if __name__ == '__main__':
