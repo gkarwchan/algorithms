@@ -12,3 +12,11 @@ It is the summary of the data, like the following:
     - Kurtosis
     - Skewness
     - Standard Deviation
+
+
+## Measure of spread: (distribution of data)
+
+1. range
+2. variance
+3. standard deviation
+4. interquartile range
