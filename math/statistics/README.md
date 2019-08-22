@@ -31,3 +31,10 @@ The most common number in the dataset.
 
 median of the whole, median the first half (Q1) and median of the second half (Q2)
 
+
+## Measure of spread: (distribution of data)
+
+1. range
+2. variance
+3. standard deviation
+4. interquartile range
