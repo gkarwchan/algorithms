@@ -12,3 +12,22 @@ It is the summary of the data, like the following:
     - Kurtosis
     - Skewness
     - Standard Deviation
+
+#### Average:  
+
+* arithmatic mean: sum all divided by how many numbers.
+(central tendency)
+
+#### Median:
+
+middle number after sort the numbers.
+
+#### Mode:  
+
+The most common number in the dataset.
+
+
+#### Interquartile:
+
+median of the whole, median the first half (Q1) and median of the second half (Q2)
+
