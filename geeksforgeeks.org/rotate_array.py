@@ -1,3 +1,5 @@
+# https://practice.geeksforgeeks.org/problems/rotate-array-by-n-elements/0
+
 def rotateArray(n, array):
     limit = n % len(array)
     return array[limit:] + array[:limit]

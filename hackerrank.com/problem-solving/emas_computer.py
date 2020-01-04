@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/two-pluses/problem
+
 n, m = map(int, input().split())
 inputs = [input() for _ in range(n)]
 

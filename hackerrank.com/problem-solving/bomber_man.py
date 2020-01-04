@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/bomber-man/problem
+
 def leftShift(x): return x & ( (x << 1) | 1)
 def rightShift(x, topValue): return x & ( (x >> 1) | topValue)
 def oneComplement(x, length): return ((1 << length) - 1) ^ x
