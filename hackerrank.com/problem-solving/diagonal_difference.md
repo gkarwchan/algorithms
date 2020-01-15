@@ -4,6 +4,9 @@
 ## Explanation:
 The main idea of this puzzle is to do it in one iteration: O(n) only
 
+
+### Python
+
 ```python
 def diagonalDifference(arr):
     axs = [arr[i][i] - arr[i][-i -1] for i in range(len(arr))]
@@ -14,6 +17,7 @@ if __name__ == '__main__':
     arr = [list(map(int, input().split())) for _ in range(n)]
     print(diagonalDifference(arr))
 ```
+### JavaScript
 
 ```js
 function diagonalDifference(arr) {
@@ -40,6 +44,7 @@ process.stdin.on("end", () => {
  main(_input);
 });
 ```
+### Scala
 
 ```scala
 import scala.io.StdIn._

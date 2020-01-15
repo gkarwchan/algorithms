@@ -10,6 +10,7 @@ The main ideas of this puzzle are:
     * js: array.reverse
     
 
+### Python
 
 ```python
 def beautifulDays(i, j, k):
@@ -19,6 +20,7 @@ if __name__ == '__main__':
     i, j, k = map(int, input().split())
     print(beautifulDays(i, j, k))
 ```
+### JavaScript
 
 ```js
 

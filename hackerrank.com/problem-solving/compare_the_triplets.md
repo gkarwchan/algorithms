@@ -8,6 +8,8 @@ The main ideas of this puzzle are:
     * python: math.copysign(1, n)
     * js: array.reverse
     
+### Python
+
 ```python
 from operator import sub
 from math import copysign
@@ -22,6 +24,8 @@ if __name__ == '__main__':
     scores = compareTriplets(a, b)
     print(' '.join(map(str, scores)))
 ```
+
+### JavaScript
 
 ```js
 
@@ -52,6 +56,7 @@ process.stdin.on("end", () => {
  main(_input);
 });
 ```
+### Scala
 
 ```scala
 object Solution extends App {
