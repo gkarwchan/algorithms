@@ -3,4 +3,4 @@
 Regular Expressions are very powerful, and can be very complicated.  
 Here you will find a list of very helpful tips.
 
-[basic](basci.md)
+[basic](basic.md)
