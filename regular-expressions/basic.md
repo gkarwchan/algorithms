@@ -68,8 +68,6 @@ regex_pattern = r"\b[\w.]+@\w+\.(?:com|net|org)\b"
 ```
 to have it more general
 
-
-
 ```python
-regex_pattern = r"\b[\w.]+@\w+\.[a-zA-Z]{2,}\b"
+exp = r'\b[\w.]+@\w+(?:\.[a-zA-Z]{2,})*\b'
 ```
