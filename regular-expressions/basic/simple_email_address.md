@@ -1,5 +1,5 @@
 
-## Task: email address:
+## Task: match simple email address:
 
 Your task is to match email address.
 
