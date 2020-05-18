@@ -1,4 +1,4 @@
-# Greatest Common Factor (GCD)
+# Greatest Common Divisor (GCD)
 
 the GCD also called Highest Common Factor (HCF) is the largest positive integer that devides each of many integers.
 
