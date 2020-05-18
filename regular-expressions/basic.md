@@ -1,24 +1,25 @@
 # Basics
 
-## Task: basic pattern  
+## Task: IP address (naive)
 
 You have a test string .
-Your task is to write a regular expression that matches only and exactly strings of form: `abc.def.ghi.klm`, where each variable `a,b,c..m` can be any single character except the newline.
+Your task is to write a regular expression that matches only and exactly strings of form: `123.456.789.123`.
 
 ### Solution:
 
-The dot (.) matches anything (except for a newline).  
-To match exactly the (.) we have to escape it using (\), and to repeat it n times we use {n}.
+To match a digit we use `\d`.  
+In this solution we will implement a naive approach for simplicity.  
+You can go to grouping to see a real solution.
 
 
 ```js
-let inputString = '123.456.abc.def';
-const match = inputString.match(/^(.{3}\.){3}.{3}$/g);
+let inputString = '123.456.876.001';
+const match = inputString.match(/^(\d{3}\.){3}\d{3}$/g);
 cosole.log(match);
 ```
 
 ```python
-regex_pattern = r"^(.{3}\.){3}.{3}$"
+regex_pattern = r"^(\d{3}\.){3}\d{3}$"
 test_string = '123.456.abc.def'
 import re
 match = re.match(regex_pattern, test_string) is not None
@@ -72,4 +73,18 @@ to have it more general
 
 ```python
 regex_pattern = r"\b[\w.]+@\w+\.[a-zA-Z]{2,}\b"
+```
+
+## Task: password validation
+Write a regex that will satisfy these conditions:
+
+* the password must be at least 5 long.
+* the first character must be alphabetic character.
+
+
+### Solution:
+To match any character except newline we use `.`.  
+
+```py
+regex_pattern = r"\b[a-zA-Z].{4,}"
 ```
