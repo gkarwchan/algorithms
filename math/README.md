@@ -7,5 +7,4 @@ This place where I solve common Math and Statistics problem using code.
  [Least Common Multiple (LCM)](lcm.md).  
  [Divisors](divisors.md).  
  [Primes](primes.md).  
- [statistics](statistics/).  
  [Project Euler](project-euler).  
