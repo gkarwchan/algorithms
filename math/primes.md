@@ -2,7 +2,7 @@
 
 ## Is Prime?
 
-To find if a number is prime, we don't need to divided by all the number below it. Similar to [divisors](divisors.md) we need to only devided by number from 1 to the square root of N.  
+To find if a number is prime, we don't need to divided by all the number below it. Similar to [divisors](divisors.md) we need to only divided by number from 1 to the square root of N.  
 
 ### Python
 
@@ -23,7 +23,7 @@ def isPrime(n):
 
 What if we want to list all prime numbers from 2 to N?.  
 Then we need to go through a loop from 2 to N and check if it is prime.  
-But it turned out there is a more effecient way to do it.  
+But it turned out there is a more efficient way to do it.  
 
 
 ### Python

@@ -1,3 +1,15 @@
+import math
+
+def divisors (number):
+  rslt = []
+  for i in range(1, math.floor(math.sqrt(number)) + 1):
+    if number % i == 0:
+      rslt.append(i)
+      if i != number // i:
+        rslt.append(number // i)
+  rslt.sort()
+  return rslt
+
 def gcdCalc(a, b):
   if (b == 0):
     return a
