@@ -29,3 +29,13 @@ def fibonacci(n):
             strt += 1
         return second
 
+def prime_factors(n):
+    p, num, s = 2, n, set()
+    while p <= math.ceil(math.sqrt(n)):
+        while num % p == 0:
+            s.add(p)
+            num //= p
+        p += 1 if p == 2 else 2
+    if num > 2:
+        s.add(num)
+    return s
