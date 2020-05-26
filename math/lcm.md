@@ -10,13 +10,35 @@ def lcm(x, y):
   while True:
     if greater % x == 0 and greater % y == 0:
       return greater
-      break
     greater += 1
   return 0 
 
-  ```
+```
 Or using GCD:
 
 ```matlab
 lcm (x, y) = (x * y) // gcd(x, y)
+```
+
+## LCM for multi numbers
+
+```matlab
+lcm(x,y,z) = lcm(x, lcm(y,z))
+```
+Using Python
+
+```python
+def gcd(a, b):
+    while(b):
+        a, b = b, a%b
+    return a
+
+def lcm(a, b, *rest):
+    # print ('input: ', a, b, rest)
+    rslt = (a*b) // gcd(a, b)
+    if rest:
+        return lcm(rslt, rest[0], *rest[1:])
+    else:
+        return rslt
+        
 ```

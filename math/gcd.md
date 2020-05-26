@@ -19,6 +19,16 @@ if __name__ == '__main__':
   print(gcdCalc(24, 36))
   
 ```
+Or without recursion
+
+```python
+
+def gcdCalc(a, b):
+  while(b):
+    a, b = b, a%b
+  return a
+```
+
 
 Or using GCD:
 
