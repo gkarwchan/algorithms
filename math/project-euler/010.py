@@ -1,23 +1,20 @@
-from math import ceil, sqrt
 
-def get_primes(n):
-    """get all primes from 2 to n"""
-    primelist = []
-    primes = 0
-    for candidate in range(2, n + 1):
-        is_prime = True
-        root = ceil(sqrt(candidate))
-        for prime in primelist:
-            if prime > root:
-                break
-            if candidate % prime == 0:
-                is_prime = False
-                break
-        if is_prime:
-            primelist.append(candidate)
-            primes += candidate
-    return primes
+def get_primes():
+    n = 10**6
+    a = [i for i in range(n+1)]
+    b = [0] * (n + 1)
+    count = 0
+    for i in range(2,n+1):
+        if a[i]:
+            count += a[i]
+            a[i*i:n+1:i] = [0] * len(range(i*i, n+1, i))
+        b[i] = count
+            
+
+    return b
 
 if __name__ == '__main__':
+    primelist = get_primes()
     for _ in range(int(input())):
-      print(get_primes(int(input())))
+        print(primelist[int(input())])
+
