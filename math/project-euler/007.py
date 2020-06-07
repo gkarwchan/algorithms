@@ -1,17 +1,7 @@
-# The problem
+# https://projecteuler.net/problem=7
+# https://www.hackerrank.com/contests/projecteuler/challenges/euler007/problem
 
-By listing the first six prime numbers: 2,3,5,7,11 and 13, we can see that the six prime is 13.
-What is the n(th) prime number?
-
-Input Format
-
-First line contains T that denotes the number of test cases. This is followed by T lines, each containing an integer, N.
-
-# The solution
-
-```python
-
-def primayat(n, cache=[2,3]):
+def primaryat(n, cache=[2,3]):
     if len(cache) >= n:
         return cache[n-1]
     else:
@@ -31,5 +21,3 @@ def primayat(n, cache=[2,3]):
 if __name__ == '__main__':
     for _ in range(int(input())):
         print(primayat(int(input())))
-
-```
