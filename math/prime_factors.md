@@ -19,7 +19,7 @@ def prime_factors(n):
 
 ```
 
-## more mature soloution
+## more mature solution
 
 We don't have to do all numbers up the input number. We can just do up to the square of it, and then return the remaining
 
