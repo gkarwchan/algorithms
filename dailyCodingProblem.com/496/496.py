@@ -14,4 +14,4 @@ def calc_set_bits_complex(n):
     if n < 12:
         return v[n-1]
     x = math.floor(math.log2(n))
-    return int(x * math.pow(2, x -1) + (n - math.pow(2,x) + 1) + far(int(n-math.pow(2, x))))
+    return int(x * math.pow(2, x -1) + (n - math.pow(2,x) + 1) + calc_set_bits_complex(int(n-math.pow(2, x))))
