@@ -1,12 +1,12 @@
 # Greatest Common Divisor (GCD)
 
-the GCD also called Highest Common Factor (HCF) is the largest positive integer that devides each of many integers.
+the GCD also called Highest Common Factor (HCF) is the largest positive integer that divides each of many integers.
 
 24 = __2__ * 2 * 2 * __3__  
 18 = __2 * 3__ * 3
 
+The best way to calculate GCD is using __`Euclidean Algorithm`__ as follows
 
-# Python
 
 ```python
 def gcdCalc(a, b):
@@ -30,7 +30,7 @@ def gcdCalc(a, b):
 ```
 
 
-Or using GCD:
+Or using LCM:
 
 ```matlab
 gcd(x, y) = (x * y) // lcm (x, y)
