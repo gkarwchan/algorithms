@@ -17,12 +17,31 @@ def isPrime(n):
             break
     return prime
 ```
+a better approach
 
+```python
+from math import ceil, sqrt
+
+def isPrime(n):
+    prime = True
+    if n % 2 == 0:
+        return False
+    if n < 5:
+        return True
+    i = 5
+    while i <= ceil(sqrt(n)):
+        if n % i == 0:
+            return False
+        if n % (i+2) == 0:
+            return False
+        i += 6
+    return True
+```
 
 ## Prime number generator
 
 What if we want to list all prime numbers from 2 to N?.  
-It turns out that the most effeciant way to do that is an algorithm called (Sieve of Eratosthenes)[https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes] which is very simple, and depends on pre-calculation. Before using this algorithm I will discuss other algorithgm.  
+It turns out that the most efficient way to do that is an algorithm called `Sieve of Eratosthenes` which is very simple, and depends on pre-calculation. Before using this algorithm I will discuss other algorithm.  
 
 We don't need to go through a loop from 2 to N and check if it is prime, because we need to do up to the square root of the number only.  
 
@@ -71,6 +90,38 @@ def get_primes(n):
             primelist.append(candidate)
     return primelist
 ```
+We can do better by knowing if we start from 5 then every third odd number is multiplication of 3.
+
+
+```python
+from math import ceil, sqrt
+
+def isprime(num, primes):
+    is_prime = True
+    root = ceil(sqrt(num))
+    for prime in primes:
+        if prime > root:
+            break
+        if num % prime == 0:
+            is_prime = False
+            break
+    return is_prime
+
+def get_primes(n):
+    """get all primes from 2 to n"""
+    primelist = [2, 3]
+    candidate = 5
+    while candidate <= n:
+        if isprime(candidate, primelist):
+            primelist.append(candidate)
+        candidate += 2
+        if candidate <= n and is_prime(candidate, primelist):
+            primelist.append(candidate)
+        candidate += 4
+    return primelist
+
+```
+
 
 If we want to do it many times then we can create a cache:  
 

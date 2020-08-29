@@ -1,3 +1,6 @@
+# https://projecteuler.net/problem=10
+# https://www.hackerrank.com/contests/projecteuler/challenges/euler010/problem
+
 
 def get_primes():
     n = 10**6
