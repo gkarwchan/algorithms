@@ -69,8 +69,15 @@ def prod_sub(arr: List[int]) -> int:
     if len(parts) > 1 or 0 in arr:
             vals.append(0)
     return max(vals)
-    
+
+def another_sub(nums):
+    b=nums[::-1]
+    for i in range(1,len(nums)):
+        nums[i]*=nums[i-1] or 1
+        b[i]*=b[i-1] or 1
+    return max(nums+b)
+
 if __name__ == '__main__':
-    doctest.testmod()
+    print another_sub([-2,2,0,-3])
     # print(split_parts([5,8,6,4]))
     # print (name_value(["codewars","abc","xyz"])
